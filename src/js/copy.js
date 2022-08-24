@@ -6,7 +6,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import ImageApiService from './imageApiService.js';
 import './sass/main.scss';
 
-const refs = {
+const refs ={
   form: document.querySelector('#search-form'),
   gallery: document.querySelector('.gallery'),
   endSearchInfo: document.querySelector('.end-search__info'),
