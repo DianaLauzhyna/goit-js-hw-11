@@ -16,10 +16,10 @@ const { form, gallery, endSearchInfo, loading, overlay } = refs;
 
 const imageApiService = new ImageApiService();
 
-// Add submit listener
+// submit 
 form.addEventListener('submit', onSearch);
 
-// Add global variables
+// global variables
 let shownImages = 0;
 let lightbox = {};
 
@@ -55,7 +55,7 @@ async function onSearch(event) {
     appendCardsMurkup(data.hits);
     addLightbox();
 
-    // Add scroll listener
+    // scroll listener
     window.addEventListener('scroll', scrollAndLoading);
 
     if (shownImages === data.totalHits) {
@@ -70,10 +70,7 @@ function scrollAndLoading() {
   const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
 
   if (clientHeight + scrollTop >= scrollHeight) {
-    // show the loading animation
     showLoading();
-
-    // load more data
     setTimeout(loadMore, 500);
   }
 
@@ -140,7 +137,7 @@ function addLightbox() {
   });
 }
 
-// Прокрутка страницы при Load more
+// Прокрутка сторінки при Load more
 function smoothRendering() {
   const { height: cardHeight } = document
     .querySelector('.gallery')
