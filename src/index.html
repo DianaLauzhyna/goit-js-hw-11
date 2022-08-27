@@ -2,32 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 11</title>
+    <title>Event Booster</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/index.scss" />
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   </head>
   <body>
-    <div class="search-form__wrapper">
-      <div class="search-form__background"></div>
-      <form class="search-form" id="search-form">
-        <input
-          type="text"
-          class="input"
-          name="searchQuery"
-          autocomplete="off"
-          placeholder="Search images..."
-        />
-        <!-- <button type="submit" class="search-btn">&#128269</button> -->
-        <button type="submit" class="search-btn">
-          <img class="search__img" src="./images/magnifier-search-zoom.svg" alt="search glass" />
-        </button>
-      </form>
-    </div>
+     <include src= "./partials/loading.html""></include>
+    <include src="./partials/header.html"></include>
+    <include src="./partials/events.html"></include>
+    <include src="./partials/pagination.html"></include>
+    <include src="./partials/footer.html"></include>
 
-    <div class="gallery"></div>
-
-    <p class="end-search__info">We're sorry, but you've reached the end of search results.</p>
-
-    <script src="index.js" type="module"></script>
+    <script type="module" src="./index.js"></script>
+   
   </body>
 </html>
