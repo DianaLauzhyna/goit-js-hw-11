@@ -3,7 +3,7 @@ import { fetchEvents } from './js/fetchEvents';
 import { fetchEventById } from './js/fetchEventById';
 import { searchCountryCode } from './js/country';
 import { createPagination } from './js/pagination';
-//import 'animate.css';
+import 'animate.css';
 //Import library to show notifications
 import { Notify } from 'notiflix';
 
