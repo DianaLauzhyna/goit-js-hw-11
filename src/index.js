@@ -44,8 +44,13 @@ const difficultEvents = async () => {
     const events = await fetchEvents(
       '', 'US', 0
     );  
-
-    totalPage = events.page.totalPages;
+    if (events.page.totalElements>=994) {
+      totalPage = Math.ceil(994/20);
+    } else {
+      totalPage = Math.ceil(events.page.totalElements/20);
+    }
+    
+    console.log(events);
     renderEvents(events._embedded.events);
     createPagination(totalPage, currentPage);
     hideLoading();    
@@ -68,7 +73,11 @@ const searchEvents = async () => {
     console.log(searchCountryCode());
     console.log(events);   
 
-    totalPage = events.page.totalPages;
+    if (events.page.totalElements>=994) {
+      totalPage = Math.ceil(994/20);
+    } else {
+      totalPage = Math.ceil(events.page.totalElements/20);
+    }
     if (totalPage != 0){
       if(currentPage === 1){
         Notify.success(`We found ${events.page.totalElements} events.`);
