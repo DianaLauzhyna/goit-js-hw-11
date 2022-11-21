@@ -1,9 +1,9 @@
 const pagination = document.querySelector("ul");
 
 export function createPagination(total, page){
-if (page >= 997) {
+/*if (page >= 997) {
     page = 997;
-};
+};*/
 
 /*-------------------------------------------------------------------------*/
         let liTag = ''; 
